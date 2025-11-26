@@ -30,6 +30,8 @@ const app = {
                 throw new Error('Store is not defined');
             }
 
+            this.navigate('dashboard');
+
             // Listen for data changes to re-render
             document.addEventListener('dataChanged', () => {
                 if (Store.currentUser) this.render();
